@@ -56,7 +56,7 @@ In the future I hope to take the segmented images and train a neural net on them
 <h3>
 <a id="61616" class="anchor" href="#61616" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/16/16</h3>
 
-<p>Picking up where I left off Tuesday, I continued with the tutorial. After getting through only about 20% of the install I decided that my issue must have been in my installation of cmake. So I reinstalled cmake from source before lunch following <a href="http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04">this tutorial</a>. It worked until I ran into another error around 76% which I was able to circumvent using <a href="https://gist.github.com/melvincabatuan/8dc300531e84822d368c">this tutorial</a>. Finally, I was able to install opencv; however, when I ran Olivier's code I again received the same error. Currently I am unsure how to continue and I figure I will just try to run this code on another machine.</p>
+<p>Picking up where I left off Tuesday, I continued with the tutorial. After getting through only about 20% of the install I decided that my issue must have been in my installation of cmake. So I reinstalled cmake from source before lunch following <a href="http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04">this tutorial</a>. It worked until I ran into another error around 76% which I was able to circumvent using <a href="https://gist.github.com/melvincabatuan/8dc300531e84822d368c">this tutorial</a>. Finally, I was able to install opencv; however, 2when I ran Olivier's code I again received the same error. Currently I am unsure how to continue and I figure I will just try to run this code on another machine.</p>
 
 <p>Alessandro also took some time to show me how to use <a href="http://www.rethinkrobotics.com/baxter/">Baxter</a>  today. Here are some important commands that I need to remember:</p>
 
@@ -100,6 +100,71 @@ log file: /home/george/.ros/log/1954eca6-37f3-11e6-a0d7-000c29f19534/usb_cam-1*.
 
 <h3>
 <a id="62216" class="anchor" href="#62216" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/22/16</h3>
+
+<p>Still couldn't get passed this. I looked through the log file to no avail and have been scratching my head on how to continue. I spent about 4 hrs but I also went to the Doctor who informed me that my fall the other day caused a hairline fracture in my arm. Before leaving, Olivier suggested that my openCV version might be the issue so I began the process of uninstalling 2.4.13 and installing the default 2.4.8 that comes with Ubuntu 14.04.</p>
+
+<h3>
+<a id="62316" class="anchor" href="#62316" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/23/16</h3>
+
+<p>I started the day installing OpenCV 2.4.8 and then reinstalling ROS and CMAKE to get the code to run. Nevertheless I got the same error which convinced me that I had to use OpenCV 3. Fortunately, Alessandro got back today and interrupted me as I was trying to install the new version of OpenCV and he was able to get the code running with 2.4.8 in about 10 minutes. It turns out my computer did not like the resolution of the camera I was using and scaling it back to 480p from 720p solved my problem. I was then able to begin working on building the dataset and was able to completely photograph 2 pieces and begin a third. <strong>The dataset can be found here</strong> </p>
+
+<h3>
+<a id="62416" class="anchor" href="#62416" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/24/16</h3>
+
+<p>I continued building the dataset today, getting through the numbers and a pass at the length three pieces. Further, I began reading the documentation of Tensorflow. I would like to ensure that I can get Tensorflow working on Olivier's small dataset before I spend a day or two classifying the data I have collected. I don't want to have to reformat after if Tensorflow has any data specific requirements. </p>
+
+<h3>
+<a id="62716" class="anchor" href="#62716" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/27/16</h3>
+
+<p>Today I continued recording data, getting through the miscellaneous three length pieces and beginning the miscellaneous odd shaped pieces. I hope to learn more about Tensorflow tomorrow, going through a tutorial or two, before attempting to apply it to Olivier's data. By Wednesday I should be devoting my time to . </p>
+
+<h3>
+<a id="62816" class="anchor" href="#62816" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/28/16</h3>
+
+<p>Today I pretty much finished off taking pictures for the dataset. Odds are I have to go take more photos for some of the blocks; however, I will leave that for another day. Further I began the <a href="https://www.tensorflow.org/versions/r0.9/tutorials/mnist/beginners/index.html">MNIST For ML Beginners</a> and hope to finish this tutorial and the <a href="https://www.tensorflow.org/versions/r0.9/tutorials/mnist/pros/index.html">Deep MNIST for Experts</a> tomorrow. I also hope to apply Olivier's code to some data I have collected now. By the end of tommorrow it would be great to have a neural net prepared to take the data I have collected and train upon it. This would allow me to focus on classifying the dataset Thursday and Friday and leave me finding just finding time to run it. </p>
+
+<h3>
+<a id="62916" class="anchor" href="#62916" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/29/16</h3>
+
+<p>I spent most of today understanding Tensorflow through doing both the tutorials I highlighted yesterday and going through the documentation. The main question I had on my mind was how should I classify the dataset for use within Tensorflow. Further I also did some interesting (light reading](<a href="http://colah.github.io/posts/2015-09-Visual-Information/">http://colah.github.io/posts/2015-09-Visual-Information/</a>) on a cost function called "cross-entropy" that I had not come into much contact with. The most significant aspect of my day was a discussion I had with Olivier about the project and his code. It turns out I was reading part of the wrong code, and that he already has a great format for me to begin classifying the data. Further, he has already implemented a classifier and a quick and desigined a way to pull from the data format. So walking away from this meaning I was theoretically able to sit down and get to work on classifieing the data. </p>
+
+<h3>
+<a id="63016" class="anchor" href="#63016" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6/30/16</h3>
+
+<p>Although I was theoretically capable of beginning work on the classifier I ran into the same issue that I did a few weeks ago trying to execute the code. </p>
+
+<pre><code>cv2.error: -------src-dir-------/opencv-2.4.10/modules/highgui/src/window.cpp:501: error: (-2) The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Carbon support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script in function cvShowImage
+</code></pre>
+
+<p>So I spent my day going through tutorials trying to resolve the issue before discovering, with Alessandro's and Olivier's help, that the source of all my woes has been my installation of anaconda. After removing it I began reconfiguring parts of my environment to run again. At the end of the day I was still running into problems getting the code to run but I think with another hour it will be good to go. </p>
+
+<h3>
+<a id="7116" class="anchor" href="#7116" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7/1/16</h3>
+
+<p>By lunchtime today I had Olivier's code up and running on my machine and I was ready to begin work on classifying the data. To do this I removed cmake and reinstalled it, then reinstalled ros, then created a new catkin_ws directory and then installed some dependencies that were specific to Olivier's code… but it finally all works fluidly. </p>
+
+<p>After lunch I played around with Olivier's code a little bit, trying to figure out what exactly I needed to do before I jumped into classifying the some 300 pictures I have. One of my main sources of annoyance was the fact that all the pictures would eventually have to be in one file which was a problem because the way I obtained the files saved them in a way that many of my pictures shared file names. Further all the pictures needed to be converted from jpg to png. To mitigate all of this I wrote a short piece of code:</p>
+
+<pre><code>for i in range(10): 
+    if i &lt; 10:
+        im = Image.open('Four/7/frame000' + str(i) + '.jpg') 
+    else:
+        im = Image.open('Four/7/frame00' + str(i) + '.jpg') 
+    im.save('Four/boards/board_' + str(146 + i) + '.png') 
+    open('Four/boards/board_' + str(146 + i) + '.json','w')
+</code></pre>
+
+<p>The remainder of my day was spent reformatting the pictures. </p>
+
+<h3>
+<a id="71116-through-72216" class="anchor" href="#71116-through-72216" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7/11/16 through 7/22/16</h3>
+
+<p>I spent this week classifying all the images I took. It was an ardouous process but it means I get to move onto more fun things with the data I collected. </p>
+
+<h3>
+<a id="71816" class="anchor" href="#71816" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7/18/16</h3>
+
+<p>Today I spent my time attempting to train a classifier on the data I collected. I ran into errors twice 3 hrs into training unfortunately, so I am going to have to wait for tomorrow to get any concrete results. In the meantime I have been exploring tensorflow more and looking for ways that the classifier could potentially be improved. I spoke to Olivier about  what he thinks is the best way to move forward and at the moment I am tasked to just research, and take detailed notes both recording results and using GitHub to document code, the best ways to preprocess the data and the possibility of changing the algorithm. The first place I am going to look for this is what method those classifying the MNIST dataset used to achieve their highly successful result. I am also keeping it in the back of my mind that there is a very real likelihood I will have to add more data to the dataset and to more data classification to achieve a robust classifier. </p>
 
 <h1>
 <a id="my-research-and-results" class="anchor" href="#my-research-and-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My Research and Results</h1>
