@@ -1,0 +1,29 @@
+{
+  "parts": [
+    {
+      "id": 0,
+      "label": "2",
+      "location": [4,1,"west"]
+    },
+    {
+      "id": 1,
+      "label": "2",
+      "location": [4,3,"west"]
+    },
+    {
+      "id": 2,
+      "label": "2",
+      "location": [4,5,"west"] 
+    },
+    {
+      "id": 3,
+      "label": "2",
+      "location": [4,7, "west"]
+    },
+    {
+      "id": 4,
+      "label": "2",
+      "location": [4,9,"west"]
+    }
+  ]
+}

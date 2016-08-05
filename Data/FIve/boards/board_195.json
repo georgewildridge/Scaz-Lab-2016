@@ -1,0 +1,14 @@
+{
+  "parts": [
+    {
+      "id": 0,
+      "label": "5",
+      "location": [2,6,"south"]
+    },
+    {
+      "id": 1,
+      "label": "5",
+      "location": [2,7,"south"]
+    }
+  ]
+}

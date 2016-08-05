@@ -1,0 +1,79 @@
+{
+  "parts": [
+    {
+      "id": 0,
+      "label": "C4",
+      "location": [2,7,"east"]
+    },
+    {
+      "id": 1,
+      "label": "C2",
+      "location": [3,7,"east"]
+    },
+    {
+      "id": 2,
+      "label": "S2",
+      "location": [4,7,"east"]
+    },
+    {
+      "id": 3,
+      "label": "S1",
+      "location": [5,7,"east"]
+    },
+    {
+      "id": 4,
+      "label": "R5",
+      "location": [6,7,"east"]
+    },
+    {
+      "id": 5,
+      "label": "R3",
+      "location": [0,1,"east"]
+    },
+    {
+      "id": 6,
+      "label": "R1",
+      "location": [1,1,"east"]
+    },
+    {
+      "id": 7,
+      "label": "D8",
+      "location": [2,1,"east"]
+    },
+    {
+      "id": 8,
+      "label": "D6",
+      "location": [3,1,"east"]
+    },
+    {
+      "id": 9,
+      "label": "D1",
+      "location": [4,1,"east"]
+    },
+    {
+      "id": 10,
+      "label": "Q4",
+      "location": [5,1,"east"]
+    },
+    {
+      "id": 11,
+      "label": "X1",
+      "location": [6,1,"east"]
+    },
+    {
+      "id": 12,
+      "label": "L1",
+      "location": [0,4,"east"]
+    },
+    {
+      "id": 13,
+      "label": "WC",
+      "location": [1,4,"east"]
+    },
+    {
+      "id": 14,
+      "label": "RP",
+      "location": [2,6,"west"]
+    }
+ ]
+}

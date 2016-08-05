@@ -1,0 +1,44 @@
+{
+  "parts": [
+    {
+      "id": 0,
+      "label": "2",
+      "location": [1,2,"west"]
+    },
+    {
+      "id": 1,
+      "label": "2",
+      "location": [1,4,"west"]
+    },
+    {
+      "id": 2,
+      "label": "2",
+      "location": [1,6,"west"] 
+    },
+    {
+      "id": 3,
+      "label": "2",
+      "location": [1,8, "west"]
+    },
+    {
+      "id": 4,
+      "label": "2",
+      "location": [2,2,"west"]
+    },
+    {
+      "id": 5,
+      "label": "2",
+      "location": [2,4,"west"]
+    },
+    {
+      "id": 6,
+      "label": "2",
+      "location": [2,6,"west"] 
+    },
+    {
+      "id": 7,
+      "label": "2",
+      "location": [2,8, "west"]
+    }
+  ]
+}
